@@ -58,7 +58,7 @@ input{
     width: 400px;
     height: 400px;
     margin-top: 20px;
-    outline: 9px solid #333;
+    /* outline: 9px solid #333; */
     
 }
 .cell{
@@ -87,6 +87,7 @@ input{
 .start-btn{
     padding: 15px 25px;
     background-color: #333;
+    color: #fff;
     border: none;
 }
 button:active{
@@ -115,4 +116,14 @@ div.x-turn .cell:not(.cell-o):hover .fa-close{
 }
 div.o-turn .cell:not(.cell-x):hover .fa-circle-o{
     display: block;
+}
+@media screen and (max-width: 420px) {
+    .modal{
+        height: auto;
+        width: 95vw;
+    }
+    .game-board{
+        height: 300px;
+        width: 300px;
+    }   
 }

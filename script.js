@@ -39,13 +39,13 @@ const game = (
         }
         const playRound = () =>{
             if(game.checkForWin(player1.sign)){
-                alert(`${player1.name} wins!`)
+                document.getElementById('turn-display').textContent = `${player1.name} wins!`
             }
             else if(game.checkForWin(player2.sign)){
-                alert(`${player2.name} wins!`)
+                document.getElementById('turn-display').textContent = `${player2.name} wins!`
             }
             else if(game.checkForTie()){
-                alert("it's a tie")
+                document.getElementById('turn-display').textContent = "it's a tie"
             }
             else{
             currentPlayer = currentPlayer === player1 ? player2 : player1
@@ -98,6 +98,7 @@ const game = (
                 cells[i].classList.remove('cell-x', 'cell-o')
                 
             } 
+            unClickable()
             game.startGame()
         }
         const checkForTie = () =>{
@@ -109,3 +110,8 @@ const game = (
         return{selectCell, playRound, startGame, checkForWin, restart, checkForTie}
     }
 )()
+
+function unClickable(){
+    document.body.style.pointerEvents = 'none'
+    setTimeout(()=>(document.body.style.pointerEvents = '') , 2000)
+}
