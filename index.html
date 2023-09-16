@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Tic Tac Toe</h1>
+    <h3 id="turn-display"></h3>
+    <div class="game-board" id="game-board">
+        <div class="cell" onclick="game.selectCell(0, this)">
+            <i class="fa fa-close"></i>
+            <i class="fa fa-circle-o"></i>
+        </div>
+        <div class="cell" onclick="game.selectCell(1, this)">
+            <i class="fa fa-close"></i>
+            <i class="fa fa-circle-o"></i>
+        </div>
+        <div class="cell" onclick="game.selectCell(2, this)">
+            <i class="fa fa-close"></i>
+            <i class="fa fa-circle-o"></i>
+        </div>
+        <div class="cell" onclick="game.selectCell(3, this)">
+            <i class="fa fa-close"></i>
+            <i class="fa fa-circle-o"></i>  
+        </div>
+        <div class="cell" onclick="game.selectCell(4, this)">
+            <i class="fa fa-close"></i>
+            <i class="fa fa-circle-o"></i>
+        </div>
+        <div class="cell" onclick="game.selectCell(5, this)">
+            <i class="fa fa-close"></i>
+            <i class="fa fa-circle-o"></i>
+        </div>
+        <div class="cell" onclick="game.selectCell(6, this)">
+            <i class="fa fa-close"></i>
+            <i class="fa fa-circle-o"></i>
+        </div>
+        <div class="cell" onclick="game.selectCell(7, this)">
+            <i class="fa fa-close"></i>
+            <i class="fa fa-circle-o"></i>
+        </div>
+        <div class="cell" onclick="game.selectCell(8, this)">
+            <i class="fa fa-close"></i>
+            <i class="fa fa-circle-o"></i>
+        </div>  
+    </div>
+    <button class="reset-btn" onclick="game.restart()">Reset</button>
+
+    <div class="modal" id="modal">
+        <div class="modal-content">
+            <h2>Hi There!</h2>
+            <h3>Please enter the player names and hit the start!</h3>
+            <div class="form-group">
+                <label for="playerName1">Player 1:</label>
+                <input type="text" id="playerName1" required>
+            </div>
+            <div class="form-group">
+                <label for="playerName2">Player 2:</label>
+                <input type="text" id="playerName2" required>
+            </div>
+            <div class="btn-container">
+                <button class="start-btn" id="start-btn" onclick="game.startGame()">Start</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
